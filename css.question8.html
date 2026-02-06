@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CBIT Login Form</title>
+    <style>
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;               /* Flexbox */
+            justify-content: center;     /* Center horizontally */
+            align-items: center;         /* Center vertically */
+            height: 100vh;               /* Full viewport height */
+            margin: 0;
+        }
+
+        /* Form Container */
+        .form-container {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow effect */
+            display: flex;
+            flex-direction: column;     /* Stack elements vertically */
+            gap: 15px;                  /* Space between elements */
+        }
+
+        /* Form Header */
+        .form-container h2 {
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Inputs */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: steelblue;
+            outline: none;
+        }
+
+        /* Button */
+        button {
+            padding: 10px;
+            background-color: steelblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2f5f8f;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 400px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </div>
+
+</body>
+</html>
