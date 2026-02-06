@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chaitanya Bharathi Institute of Technology</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .main {
+            flex: 3;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Chaitanya Bharathi Institute of Technology</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Departments</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Admissions</li>
+                <li>Departments</li>
+                <li>Events & Workshops</li>
+                <li>Student Portal</li>
+                <li>Contact Us</li>
+            </ul>
+            <h3>Announcements</h3>
+            <p>CBIT has announced new scholarship programs for the 2026 session.</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <h2>Welcome to Chaitanya Bharathi Institute of Technology</h2>
+            <p>
+                Chaitanya Bharathi Institute of Technology (CBIT) is a premier institute offering quality education in 
+                engineering, technology, and management. Established with a vision to provide world-class learning 
+                opportunities, CBIT emphasizes innovation, research, and holistic development of students.
+            </p>
+            <p>
+                Our campus hosts a range of departments including Computer Science,Information Technology,
+                 Electronics, Mechanical Engineering, 
+                and Civil Engineering. With modern laboratories, experienced faculty, and a vibrant student community, 
+                CBIT ensures an environment conducive to learning and professional growth.
+            </p>
+            <p>
+                We organize workshops, seminars, and industry interactions regularly to prepare students for real-world challenges.
+                Explore our departments, join our events, and become part of the CBIT family.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Chaitanya Bharathi Institute of Technology. All rights reserved.
+    </footer>
+
+</body>
+</html>
