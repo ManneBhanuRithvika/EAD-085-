@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model Demo</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Element selector: applies to all <p> elements */
+        p {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Class selector: applied to all boxes with class "box" */
+        .box {
+            width: 250px;
+            height: 120px;
+            padding: 15px;                /* space inside the box */
+            margin: 20px;                 /* space outside the box */
+            border: 3px solid green;      /* border style */
+            background-color: lightyellow;
+            text-align: center;
+            display: inline-block;
+            line-height: 120px;           /* center text vertically */
+        }
+
+        /* ID selector: applied to the box with id "mainBox" */
+        #mainBox {
+            border-color: blue;           /* unique border color */
+            background-color: lightgray;  /* unique background */
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- optional external CSS -->
+
+</head>
+<body>
+
+    <h1>CSS Box Model Demonstration</h1>
+
+    <!-- Element selector demonstration -->
+    <p>This is a paragraph styled using the element selector.</p>
+
+    <!-- Box using class selector -->
+    <div class="box">Class Selector Box</div>
+
+    <!-- Box using ID selector -->
+    <div class="box" id="mainBox">ID Selector Box</div>
+
+    <!-- Box using inline CSS -->
+    <div class="box" style="border: 3px dashed red; background-color: #ffebcd;">
+        Inline CSS Box
+    </div>
+
+</body>
+</html>
+>
