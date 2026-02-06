@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CBIT Simple Web Page Layout</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: #004080; /* CBIT theme blue */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: white;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #ffcc00; /* highlight on hover */
+        }
+
+        /* Container for Sidebar + Main */
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            min-height: 400px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            flex: 1; /* 1 part of container */
+            background-color: #cce6ff; /* light blue */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 3; /* 3 parts of container */
+            background-color: #ffffff; /* white */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .main h2 {
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Chaitanya Bharathi Institute of Technology</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Departments</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Admissions</li>
+                <li>Departments</li>
+                <li>Events & Workshops</li>
+                <li>Student Portal</li>
+                <li>Contact Us</li>
+            </ul>
+            <h3>Announcements</h3>
+            <p>Scholarship programs announced for 2026 session.</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <h2>Welcome to CBIT</h2>
+            <p>
+                Chaitanya Bharathi Institute of Technology (CBIT) is a leading institute providing quality education in engineering, 
+                technology, and management. We focus on innovation, research, and overall student development.
+            </p>
+            <p>
+                Our departments include Computer Science, Electronics, Mechanical, and Civil Engineering. The campus is equipped 
+                with modern labs, libraries, and facilities to enhance learning and skill development.
+            </p>
+            <p>
+                CBIT hosts workshops, seminars, and industry interactions regularly to prepare students for professional challenges.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Chaitanya Bharathi Institute of Technology. All rights reserved.
+    </footer>
+
+</body>
+</html>
+
+
