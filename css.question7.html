@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>CBIT Simple Web Page Layout</title>
     <style>
-        /* General Styles */
-        body {
+            body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
@@ -16,7 +15,6 @@
             color: white;
         }
 
-        /* Header */
         header {
             background-color: #004080; /* CBIT theme blue */
             color: white;
@@ -35,10 +33,9 @@
         }
 
         header nav a:hover {
-            color: #ffcc00; /* highlight on hover */
+            color: #ffcc00; 
         }
 
-        /* Container for Sidebar + Main */
         .container {
             display: flex;
             gap: 20px;
@@ -46,10 +43,9 @@
             min-height: 400px;
         }
 
-        /* Sidebar */
         .sidebar {
-            flex: 1; /* 1 part of container */
-            background-color: #cce6ff; /* light blue */
+            flex: 1;
+            background-color: #cce6ff; 
             padding: 20px;
             border-radius: 5px;
         }
@@ -67,10 +63,9 @@
             margin: 10px 0;
         }
 
-        /* Main Content */
         .main {
-            flex: 3; /* 3 parts of container */
-            background-color: #ffffff; /* white */
+            flex: 3;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 5px;
         }
@@ -79,7 +74,6 @@
             margin-top: 0;
         }
 
-        /* Footer */
         footer {
             background-color: #004080;
             color: white;
@@ -88,7 +82,6 @@
             margin-top: 20px;
         }
 
-        /* Responsive Design */
         @media screen and (max-width: 800px) {
             .container {
                 flex-direction: column;
@@ -98,7 +91,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <h1>Chaitanya Bharathi Institute of Technology</h1>
         <nav>
@@ -109,9 +101,7 @@
         </nav>
     </header>
 
-    <!-- Main Layout -->
     <div class="container">
-        <!-- Sidebar -->
         <div class="sidebar">
             <h3>Quick Links</h3>
             <ul>
@@ -125,7 +115,6 @@
             <p>Scholarship programs announced for 2026 session.</p>
         </div>
 
-        <!-- Main Content -->
         <div class="main">
             <h2>Welcome to CBIT</h2>
             <p>
@@ -142,12 +131,12 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         &copy; 2026 Chaitanya Bharathi Institute of Technology. All rights reserved.
     </footer>
 
 </body>
 </html>
+
 
 
