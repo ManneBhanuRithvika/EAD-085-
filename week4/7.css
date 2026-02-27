@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+}
+
+/* Alternate black and white squares using nth-child */
+.chessboard .square:nth-child(8n+1),
+.chessboard .square:nth-child(8n+3),
+.chessboard .square:nth-child(8n+5),
+.chessboard .square:nth-child(8n+7) {
+    background-color: #000000;
+}
+
+.chessboard .square:nth-child(8n+2),
+.chessboard .square:nth-child(8n+4),
+.chessboard .square:nth-child(8n+6),
+.chessboard .square:nth-child(8n+8) {
+    background-color: #ffffff;
+}

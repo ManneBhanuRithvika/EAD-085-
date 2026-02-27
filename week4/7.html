@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Board</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, 60px);
+            grid-template-rows: repeat(8, 60px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .square {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Correct alternating pattern */
+        .chessboard .square:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        .chessboard .square:nth-child(even) {
+            background-color: #000;
+        }
+
+        /* Fix every second row to start with opposite color */
+        .chessboard .square:nth-child(n + 1) {
+            /* do nothing here */
+        }
+
+        /* Alternative better approach using CSS Grid with row/column */
+        .chessboard .square:nth-child(8n + 1),
+        .chessboard .square:nth-child(8n + 3),
+        .chessboard .square:nth-child(8n + 5),
+        .chessboard .square:nth-child(8n + 7) {
+            background-color: #000;
+        }
+
+        .chessboard .square:nth-child(8n + 2),
+        .chessboard .square:nth-child(8n + 4),
+        .chessboard .square:nth-child(8n + 6),
+        .chessboard .square:nth-child(8n + 8) {
+            background-color: #fff;
+        }
+
+        /* Shift colors for even rows */
+        .chessboard .square:nth-child(n + 9):nth-child(-n + 16),
+        .chessboard .square:nth-child(n + 25):nth-child(-n + 32),
+        .chessboard .square:nth-child(n + 41):nth-child(-n + 48),
+        .chessboard .square:nth-child(n + 57):nth-child(-n + 64) {
+            /* flip colors */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="chessboard">
+    <!-- Generate 64 squares -->
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+</div>
+
+</body>
+</html>
