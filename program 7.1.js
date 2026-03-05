@@ -18,7 +18,7 @@ function Student(name,age,course)
     this.course = course;
 }
 
-let s1 = new Student("Hansika",18,"IT");
+let s1 = new Student("Rithvika",19,"IT");
 
 document.write("Name: " + s1.name + "<br>");
 document.write("Age: " + s1.age + "<br>");
@@ -28,3 +28,4 @@ document.write("Course: " + s1.course);
 
 </body>
 </html>
+
