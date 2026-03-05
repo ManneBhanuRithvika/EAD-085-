@@ -23,7 +23,7 @@ function BankAccount(name,balance)
     }
 }
 
-let account = new BankAccount("Hansika",5000);
+let account = new BankAccount("Rithvika",10000);
 
 document.write("Balance after deposit: " + account.deposit(2000));
 
@@ -31,3 +31,4 @@ document.write("Balance after deposit: " + account.deposit(2000));
 
 </body>
 </html>
+
