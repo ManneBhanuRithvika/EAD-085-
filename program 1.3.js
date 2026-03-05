@@ -29,9 +29,10 @@ function checkArmstrong(num)
         document.write(num + " is NOT an Armstrong Number");
 }
 
-checkArmstrong(153);
+checkArmstrong(370);
 
 </script>
 
 </body>
 </html>
+
