@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Function Exercises</title>
+</head>
 
+<body>
+
+<h2>Check the console for outputs</h2>
+
+<script>
+
+// 1. Fibonacci (Recursive vs Iterative)
+
+function fibRecursive(n){
+    if(n <= 1) return n;
+    return fibRecursive(n-1) + fibRecursive(n-2);
+}
+
+function fibIterative(n){
+    let a = 0, b = 1;
+    for(let i = 2; i <= n; i++){
+        let temp = a + b;
+        a = b;
+        b = temp;
+    }
+    return n === 0 ? 0 : b;
+}
+
+console.time("Recursive");
+console.log("Recursive Fibonacci:", fibRecursive(40));
+console.timeEnd("Recursive");
+
+console.time("Iterative");
+console.log("Iterative Fibonacci:", fibIterative(40));
+console.timeEnd("Iterative");
+
+
+// 2. Password Manager using Closures
+
+function createPasswordManager(){
+    let password = "";
+
+    return {
+        setPassword: function(newPass){
+            password = newPass;
+            console.log("Password set successfully");
+        },
+
+        validatePassword: function(pass){
+            if(pass === password){
+                console.log("Password Correct");
+            } else {
+                console.log("Password Incorrect");
+            }
+        },
+
+        resetPassword: function(newPass){
+            password = newPass;
+            console.log("Password reset successful");
+        }
+    };
+}
+
+let manager = createPasswordManager();
+manager.setPassword("1234");
+manager.validatePassword("1234");
+
+
+// 3. Calculator Function
+
+function calculator(a, b, operation){
+
+    if(operation === "add") return a + b;
+    if(operation === "subtract") return a - b;
+    if(operation === "multiply") return a * b;
+    if(operation === "divide") return a / b;
+    if(operation === "mod") return a % b;
+
+    return "Invalid Operation";
+}
+
+console.log(calculator(10,5,"add"));
+console.log(calculator(10,5,"divide"));
+console.log(calculator(10,5,"mod"));
+
+
+// 4. Factorial using Recursion
+
+function factorial(n){
+    if(n <= 1) return 1;
+    return n * factorial(n-1);
+}
+
+console.log("Factorial of 5:", factorial(5));
+
+
+// 5. Filter Even Numbers using Callback
+
+function filterEven(numbers){
+    return numbers.filter(function(num){
+        return num % 2 === 0;
+    });
+}
+
+console.log(filterEven([1,2,3,4,5,6]));
+
+
+// 6. Arrow Function with map()
+
+let numbers = [1,2,3,4,5];
+let squares = numbers.map(x => x*x);
+
+console.log("Squares:", squares);
+
+
+// 7. Default Parameters
+
+function greet(name = "Guest", time = "Day"){
+    console.log(`Good ${time}, ${name}!`);
+}
+
+greet();
+greet("Alice","Morning");
+
+
+// 8. Higher Order Function (Compose)
+
+function double(x){
+    return x * 2;
+}
+
+function square(x){
+    return x * x;
+}
+
+function compose(f, g, value){
+    return f(g(value));
+}
+
+console.log(compose(double, square, 3));
+
+
+// 9. Bank Account using Closure
+
+function bankAccount(initialBalance){
+
+    let balance = initialBalance;
+
+    return {
+
+        deposit: function(amount){
+            balance += amount;
+            console.log("Balance:", balance);
+        },
+
+        withdraw: function(amount){
+            if(amount <= balance){
+                balance -= amount;
+                console.log("Balance:", balance);
+            }
+            else{
+                console.log("Insufficient balance");
+            }
+        }
+
+    };
+}
+
+let account = bankAccount(1000);
+account.deposit(500);
+account.withdraw(200);
+
+
+// 10. Memoization Function
+
+function memoize(fn){
+
+    const cache = {};
+
+    return function(n){
+
+        if(cache[n]){
+            console.log("From Cache");
+            return cache[n];
+        }
+
+        const result = fn(n);
+        cache[n] = result;
+        return result;
+    }
+}
+
+const memoFactorial = memoize(function factorial(n){
+    return n <= 1 ? 1 : n * factorial(n-1);
+});
+
+console.log(memoFactorial(5));
+console.log(memoFactorial(5));
+
+
+</script>
+
+</body>
+</html>
