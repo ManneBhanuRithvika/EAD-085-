@@ -23,9 +23,10 @@ function factorial(n)
     document.write("Factorial of " + n + " is " + fact);
 }
 
-factorial(5);
+factorial(7);
 
 </script>
 
 </body>
 </html>
+
